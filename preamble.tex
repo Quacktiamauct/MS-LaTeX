@@ -7,12 +7,10 @@
 \usepackage{graphicx}
 \usepackage{multicol}
 \usepackage{titlesec}
-\usepackage{censor}
 \usepackage{csquotes}
 \usepackage{booktabs}
 \usepackage{hyperref}
 \usepackage{xparse}
-\usepackage{lettrine}
 \usepackage{blindtext}
 \usepackage[kerning=false,protrusion=false,final]{microtype}
 \usepackage{pst-all}
@@ -29,7 +27,6 @@
 \setlength{\parindent}{0pt}%
 
 \usepackage[document]{ragged2e}
-
 
 \newcommand{\winarty}{
 \begin{tikzpicture}
@@ -69,23 +66,6 @@ text={[\fontsize{20}{20}\bfseries\color{1}\selectfont]1[]}},]
 \definecolor{pgreen}{rgb}{0,0.5,0}
 \definecolor{pred}{rgb}{0.9,0,0}
 \definecolor{pgrey}{rgb}{0.46,0.45,0.48}
-
-\usepackage{listings}
-\usepackage{./listings-golang}
-\lstset{language=Golang,
-  showspaces=false,
-  showtabs=false,
-  breaklines=true,
-  tabsize=2,
-  showstringspaces=false,
-  breakatwhitespace=true,
-  commentstyle=\color{pgreen},
-  keywordstyle=\color{pblue},
-  stringstyle=\color{pred},
-  basicstyle=\footnotesize\ttfamily,
-  moredelim=[il][\textcolor{pgrey}]{\$\$},
-  moredelim=[is][\textcolor{pgrey}]{\%\%}{\%\%}
-}
 
 \usepackage{fancyhdr}
  

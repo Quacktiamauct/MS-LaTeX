@@ -1,32 +1,23 @@
-\documentclass[a4paper,12pt]{article}
-\usepackage{listings}
-\usepackage{xcolor}
-\usepackage{amsthm}
-\usepackage{amssymb}
-\usepackage{mathtools}
-\usepackage{graphicx}
-\usepackage{multicol}
-\usepackage{titlesec}
-\usepackage{csquotes}
-\usepackage{booktabs}
-\usepackage{hyperref}
-\usepackage{xparse}
-\usepackage{blindtext}
-\usepackage[kerning=false,protrusion=false,final]{microtype}
-\usepackage{pst-all}
-\usepackage{pst-light3d}
-\usepackage{tikz}
+\ProvidesClass{ms-word}[2019/12/04]
+\LoadClass[12pt]{article}
+
+\RequirePackage{etoolbox}
+
+\RequirePackage{xcolor}
+\RequirePackage[margin=1in]{geometry}
+\RequirePackage{titlesec}
+\RequirePackage[kerning=false,protrusion=false,final]{microtype}
+\RequirePackage{tikz}
 \usetikzlibrary{fadings,decorations.text}
-%\usepackage{newtxtext,newtxmath} % Times
-\usepackage{helvet}
+\RequirePackage{newtxtext,newtxmath} % Times
+\RequirePackage{helvet} % since arial is a helvetica clone
 \renewcommand{\familydefault}{\sfdefault}
 
-\usepackage[margin=1in]{geometry}
 \renewcommand{\baselinestretch}{1.5}
 \setlength{\parskip}{\baselineskip}%
 \setlength{\parindent}{0pt}%
 
-\usepackage[document]{ragged2e}
+\RequirePackage[document]{ragged2e}
 
 \newcommand{\winarty}{
 \begin{tikzpicture}
@@ -44,33 +35,29 @@ text={[\fontsize{20}{20}\bfseries\color{1}\selectfont]1[]}},]
 \definecolor{mscyan}{rgb}{0,0.4,0.8}
 
 \titleformat{\section}
-  {\large\bfseries\color{msblue}}{\thesection}{-0.2em}{}
+{\large\bfseries\color{msblue}}{}{-0.2em}{}
 \titleformat{\subsection}
-  {\color{mscyan}}{\thesubsection}{-0.2em}{}
+  {\color{mscyan}}{}{-0.2em}{}
 
 \titlespacing*{\section}
 {0pt}{1.5ex}{-0.4ex}
 \titlespacing*{\subsection}
 {0pt}{1.5ex}{-0.4ex}
 
-\hyphenpenalty10000
-\exhyphenpenalty10000
- 
+\hyphenpenalty10
+\exhyphenpenalty10
+
 \renewcommand{\thesection}{\arabic{section}}
 \renewcommand{\thesubsection}{\arabic{subsection}}
 \renewcommand{\thesubsubsection}{\roman{subsubsection})}
 
-\newcommand{\floor}[1]{\left\lfloor #1 \right\rfloor}
+\RequirePackage{fancyhdr}
+\fancypagestyle{plain}{}
+\fancyhead[RO]{\bfseries dank}
+\fancyhead[LO]{\bfseries title}
+\fancyfoot[CO]{\bfseries \thepage}
+\AtEndOfPreamble{\author{HappY!}}
 
-\definecolor{pblue}{rgb}{0.13,0.13,1}
-\definecolor{pgreen}{rgb}{0,0.5,0}
-\definecolor{pred}{rgb}{0.9,0,0}
-\definecolor{pgrey}{rgb}{0.46,0.45,0.48}
-
-\usepackage{fancyhdr}
- 
-\pagestyle{fancy}
-\fancyhf{}
-\rhead{\bfseries Assignment VI}
-\lhead{\bfseries Anders, Thomas and Mikkel}
-\renewcommand{\headrule}
+\renewcommand{\headrule}{}
+\sloppy
+\endinput
